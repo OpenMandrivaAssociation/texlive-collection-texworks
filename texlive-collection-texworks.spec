@@ -1,6 +1,6 @@
 Name:		texlive-collection-texworks
 Version:	54074
-Release:	1
+Release:	2
 Summary:	TeXworks editor; TL includes only the Windows binary
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/collection-texworks
