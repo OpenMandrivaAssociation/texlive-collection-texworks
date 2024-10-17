@@ -3,7 +3,7 @@ Version:	54074
 Release:	2
 Summary:	TeXworks editor; TL includes only the Windows binary
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/collection-texworks
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/collection-texworks
 License:	
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/collection-texworks.r%{version}.tar.xz
 BuildArch:	noarch
