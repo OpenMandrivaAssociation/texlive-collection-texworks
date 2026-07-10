@@ -1,32 +1,22 @@
-Name:		texlive-collection-texworks
-Version:	54074
-Release:	2
+%global tl_name collection-texworks
+%global tl_revision 71515
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
+Release:	1
 Summary:	TeXworks editor; TL includes only the Windows binary
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/collection-texworks
-License:	
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/collection-texworks.r%{version}.tar.xz
+URL:		https://www.ctan.org/pkg/collection-texworks
+License:	LPPL
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/collection-texworks.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Requires:	texlive(collection-basic)
+Requires:	texlive(texworks)
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-See http://tug.org/texworks.
+See https://tug.org/texworks.
 
-%prep
-%autosetup -p1 -c
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
